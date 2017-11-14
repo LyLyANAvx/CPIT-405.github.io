@@ -34,7 +34,7 @@ p{
     font-weight: bold; 
 }
 
-div{
+body div:first-child{
     border: none;
     margin-left: 25%;
     margin-right: 25%;
@@ -44,4 +44,20 @@ div{
     padding-top: 2%;
     padding-bottom: 0.5%;
 
+}
+#sty{
+    background-color: rgb(219, 40, 40);
+    display: none; 
+}
+
+#p1{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: none; 
+}
+
+#p2{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: none; 
 }

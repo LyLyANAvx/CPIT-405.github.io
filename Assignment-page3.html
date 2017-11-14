@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <!-- Assignment1 - Mazen Al-Jehani - 1406094 -->
-    <head>
-            <meta charset="UTF-8">
-            <link rel="stylesheet" href="css-Page-3.css">
-            <title>Submit news</title>
-    </head>
-    <body>
-        <div>
+<!-- Assignment1 - Mazen Al-Jehani - 1406094 -->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css-Page-3.css">
+    <title>Submit news</title>
+</head>
+
+<body>
+    <div>
         <h1>Submit</h1>
         <form>
-                <label>Title:</label>
-                <input class="in in2 in3 mar" type="text">
-                <label>URL:</label>
-                <input class="in in2 in3 mar" type="url">
-                <p>or</p>
-                <label>Text:</label>
-                <textarea class="in mar hh" name="text" cols="36" rows="4"></textarea>
-                <input class="sub" type="submit" value="Submit">
+            <label>Title:</label>
+            <input id="tt" class="in in2 in3 mar" type="text">
+            <label>URL:</label>
+            <input id="ur" class="in in2 in3 mar" type="url">
+            <p>or</p>
+            <label>Text:</label>
+            <textarea id="txa" class="in mar hh" name="text" cols="36" rows="4"></textarea>
+            <input id="sb" class="sub" type="submit" value="Submit">
 
         </form>
+        <div id="sty">
+            <p id="p1">Title must be out</p>
+            <p id="p2">Either the URL or field must be filled out</p>
+        </div>
+
+
     </div>
-    </body>
+    <script src="JC-Page-3.js"></script>
+</body>
+
 </html>

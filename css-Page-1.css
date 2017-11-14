@@ -87,6 +87,13 @@
     border-top: 1px solid rgb(0, 0, 0);
     width: 99%;
 }
+
 span{
     margin: 1.25%;
+}
+
+select{
+    float: right;
+    margin-right: 1%;
+    font-size: 90%;
 }
