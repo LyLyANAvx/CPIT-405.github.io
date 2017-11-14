@@ -1,0 +1,47 @@
+.in {
+    width: 100%;
+    padding: 1%;
+    margin: 0.5% 0;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+}
+
+.in2:hover {
+    background-color: rgb(143, 143, 143);
+}
+
+.in3:focus {
+    background-color: rgb(143, 143, 143);
+}
+
+.sub{
+    background-color: rgb(141, 11, 11);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 1.25% 4%;
+    font-weight: bold;
+}
+
+.mar{
+margin-bottom:3%; 
+}
+
+.hh{
+    resize: vertical;
+}
+
+p{
+    font-weight: bold; 
+}
+
+div{
+    border: none;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: rgb(255, 249, 244);
+    padding-left: 1%;  
+    padding-right: 2%; 
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+
+}

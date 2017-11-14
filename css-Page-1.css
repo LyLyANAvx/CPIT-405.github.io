@@ -1,0 +1,92 @@
+.ddo{
+    border: none;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(255, 245, 234); 
+}
+
+.GPar-ul{
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0%;
+    padding: 0%;
+    background-color: rgb(141, 11, 11);
+    
+}
+
+.Par-li{
+    float: left;
+}
+
+.par-li-a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 12px 14px;
+    
+}
+
+.frist{
+    background-color: rgb(0, 0, 0);
+}
+
+.x:hover:not(.frist):not(.second) {
+    background-color: rgb(255, 50, 50);
+}
+
+.noList{
+    list-style-type: none;
+}
+
+.lineB{
+    border-bottom: solid rgb(0, 0, 0);
+    padding-bottom: 0.9%;
+    padding-top: 1.25%;
+    width: 99%;
+}
+
+.x2:hover{
+    background-color: rgb(238, 217, 194);
+}
+
+.stA {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.cen {
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+
+.tit{
+    font-weight: bold;
+    display: inline;
+}
+
+.fonA{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.hrdi{
+    border-bottom: 1px solid rgb(0, 0, 0);
+    width: 100%;
+}
+
+.hrdi2{
+    margin: 1% 0%;
+    padding: 0.5%;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0);
+    width: 99%;
+}
+span{
+    margin: 1.25%;
+}

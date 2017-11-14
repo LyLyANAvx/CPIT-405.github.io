@@ -1,0 +1,49 @@
+h1{
+color: rgb(141, 11, 11);
+font-weight: bold;
+}
+
+.bb{
+    font-weight: bold;  
+}
+
+.backdropFP{
+
+background-color: rgb(94, 94, 94);
+color: rgb(255, 255, 255);
+padding: 1%
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(odd){
+    background-color: rgb(226, 226, 226);
+}
+
+th {
+    background-color: rgb(94, 94, 94);
+    color: rgb(255, 255, 255);
+}
+
+th, td {
+    padding: 0.70%;
+}
+
+div{
+    border: none;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: rgb(255, 249, 244);
+    padding-left: 1%;  
+    padding-right: 1%; 
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+
+}
