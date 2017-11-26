@@ -1,54 +1,49 @@
-var obj1 = {
-    url: "https://www.google.com.sa/",
-    titel: "&nbsp; Yarn - A new package manager for JavaScript",
-    like: 570,
-    date: new Date("January 25, 2016 19:30:03"),
-    comm: 243
-};
+var arrOfObj = [];
 
-var obj2 = {
-    url: "https://www.google.com.sa/",
-    titel: " &nbsp; Tesseractjs - Pure JavaScript OCR for 60 Languages",
-    like: 301,
-    date: new Date("October 09, 2016 10:45:39"),
-    comm: 111
-};
+function id() {
+    var xHttpA = new XMLHttpRequest();
+    xHttpA.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var josnObjA = JSON.parse(xHttpA.response);
+            for (var i = 0; i < 30; i++) {
+                getInfo(josnObjA[i])
+            } // end for loop
+        }  // end if  
+    }; // end function
+    xHttpA.open("GET", "https://hacker-news.firebaseio.com/v0/topstories.json", true);
+    xHttpA.send();
+} // end id function
 
-var obj3 = {
-    url: "https://www.google.com.sa/",
-    titel: " &nbsp; Blueprint - A React UI toolkit for the web",
-    like: 432,
-    date: new Date("June 11, 2017 11:11:11"),
-    comm: 89
-};
-
-var obj4 = {
-    url: "https://www.google.com.sa/",
-    titel: " &nbsp; Introducing Create React Native App",
-    like: 112,
-    date: new Date("November 23, 2017 13:28:48"),
-    comm: 315
-};
-
-var obj5 = {
-    url: "https://www.google.com.sa/",
-    titel: " &nbsp; Cheatsheet for the modern JavaScript",
-    like: 262,
-    date: new Date("December 24, 2016 21:13:56"),
-    comm: 23
-};
-
-var arrOfObj = [obj1, obj2, obj3, obj4, obj5];
+function getInfo(topStr) {
+    var xHttpB = new XMLHttpRequest();
+    xHttpB.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var josnObjB = JSON.parse(xHttpB.response);
+            var obj = {
+                url: josnObjB.url,
+                titel: josnObjB.title,
+                like: josnObjB.score,
+                date: new Date(josnObjB.time * 1000),
+                comm: josnObjB.descendants
+            };
+            arrOfObj.push(obj);
+            if (arrOfObj.length == 30) {
+                arrOfObj.sort(function (z, y) { return y.like - z.like });
+                printFun();
+            }
+        } // end if 
+    }// end function
+    xHttpB.open("GET", "https://hacker-news.firebaseio.com/v0/item/" + topStr + ".json", true);
+    xHttpB.send();
+} // end getInfo function
 
 //================================================================
 
 var ulpar = document.getElementById('ulpar');
 
-
 function printFun() {
     var x = "";
-    var month = ["January", "February", "March", "April", "May","June", "July", "August", "September", "October", "November", "December"];
-
+    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     for (var i = 0; i < arrOfObj.length; i++) {
         x +=
             "<li class=\"lineB x2\">" +
@@ -62,7 +57,6 @@ function printFun() {
             "</span> | <span>" + arrOfObj[i].comm + " comments</span></li>" +
             "</ul>" +
             "</li>"
-
     }// end of loop
     ulpar.innerHTML = x;
 }// end printer function
@@ -70,8 +64,7 @@ function printFun() {
 //================================================================
 
 window.onload = function () {
-    arrOfObj.sort(function (z, y) { return y.like - z.like });
-    printFun();
+    id();
 } // load
 
 //================================================================
@@ -79,16 +72,12 @@ var selSort = document.getElementById('bySelect');
 selSort.onchange = function () {
     if (selSort.value == "comments") {
         arrOfObj.sort(function (z, y) { return y.comm - z.comm });
-
     }
     else if (selSort.value == "Newest") {
         arrOfObj.sort(function (z, y) { return y.date - z.date });
-
     }
     else {
         arrOfObj.sort(function (z, y) { return y.like - z.like });
-
     }
     printFun();
 } // end sort function
-
